@@ -1,9 +1,6 @@
 *{
     margin:0px;
     padding: 0;
-    font-family: sans-serif;
-    line-height: 22px;
-    font-size: 12px;
 }
 
 /*Top Navbar*/
@@ -13,6 +10,9 @@
     padding-top: 7px;
     padding-bottom: 7px;
     flex-wrap: wrap;
+    font-family: sans-serif;
+    line-height: 22px;
+    font-size: 12px;
 }
 .contact-content{
     justify-content: center;
@@ -71,4 +71,52 @@ option{
     .offer-display{
         display: none;
     }
+}
+
+/*Main Navbar*/
+.navbar{
+    background-color: #ffffff;
+    color: #231F1E;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    flex-wrap: wrap;
+    display: flex;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+}
+.pointer{
+    cursor: pointer;
+}
+.navbar-right-content{
+    display: inline-flex;
+}
+.account{
+    text-decoration: none;
+}
+.navbar-menu{
+    display: inline-flex;
+}
+.navbar-menu div{
+    margin-left: 5rem;
+}
+input[type=search] {
+    height: 38px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 16px;
+    border: 1px solid #555;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+input[type=search]:focus {
+    border: 1px solid #65deff;
+}
+
+/*Main image*/
+.main-image img{
+    
 }
