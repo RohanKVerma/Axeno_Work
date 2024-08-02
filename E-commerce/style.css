@@ -18,7 +18,6 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    margin-left: 40px;
 }
 .offer-display{
     cursor: pointer;
@@ -27,6 +26,8 @@
     justify-content: space-between;
     align-items: center;
     display: flex;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 .contact-content img{
     width: 100%;
@@ -68,13 +69,13 @@ option{
     color: black;
     padding: 5rem;
 }
-@media screen and (max-width: 490px){
+@media screen and (max-width: 340px){
     .offer-display{
         display: none;
     }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 640px){
     
     .topbar-content{
         display: flex;
@@ -88,7 +89,7 @@ option{
 .navbar{
     background-color: #ffffff;
     color: #231F1E;
-    padding-top: 7px;
+    padding-top: 10px;
     padding-bottom: 7px;
     flex-wrap: wrap;
     display: flex;
@@ -103,15 +104,29 @@ option{
 }
 .navbar-right-content{
     display: inline-flex;
-}
-.account{
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    gap:10px; 
     text-decoration: none;
+}
+.navbar-right-content a{
+    text-decoration: none;
+}
+.navbar-right-content img{
+    justify-content: center;
+    align-items: center;
 }
 .navbar-menu{
     display: inline-flex;
+    justify-content: start;
+    align-items: center;
+    flex-grow: 1;
+    margin-left: 10px;
+    gap:10px;
 }
 .navbar-menu div{
-    margin-left: 5rem;
+    margin-left: 5px;
 }
 input[type=search] {
     height: 38px;
@@ -126,8 +141,55 @@ input[type=search] {
 input[type=search]:focus {
     border: 1px solid #65deff;
 }
+.brand-logo{
+    margin-top: 5px;
+    flex-shrink: 1;
+    flex-basis: 100px;
+}
+.collapse-menu{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.collapse-menu img{
+    height: 20px;
+    justify-self: center;
+    align-self: center;
+    margin: 10px;
+    display: none;
+    float: left;
+}
+
+@media screen and (max-width:960px){
+    .navbar-menu{
+        display: none;
+    }
+    .search-bar{
+        display: none;
+    }
+    .collapse-menu img{
+        display: flex;
+    }
+    .navbar-right-content{
+        flex-grow: 1;
+    }
+}
+@media screen and (max-width:467px){
+    .navbar-right-content{
+        display: none;
+    }
+    .brand-logo{
+        flex-grow: 1;
+    }
+}
+@media screen and (max-width:298px){
+    .brand-logo{
+        flex-shrink: 10;
+    }
+}
 
 /*Main image*/
 .main-image img{
     height: 110vh;
+    width: 100%;
 }
