@@ -32,6 +32,8 @@
     width: 100%;
     vertical-align: middle;
     display: inline-block;
+    align-items: center;
+    justify-content: center;
 }
 .contact-number{
     margin-left: 5px;
@@ -41,7 +43,6 @@
     cursor: pointer;
     justify-content: center;
     align-items: center;
-    margin-right: 40px;
     display: flex;
 }
 .topbar-menu ul{
@@ -70,6 +71,16 @@ option{
 @media screen and (max-width: 490px){
     .offer-display{
         display: none;
+    }
+}
+
+@media screen and (max-width: 600px){
+    
+    .topbar-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -118,5 +129,5 @@ input[type=search]:focus {
 
 /*Main image*/
 .main-image img{
-    
+    height: 110vh;
 }
