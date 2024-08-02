@@ -11,6 +11,9 @@ section{
     margin-right: 40px;
     box-sizing: border-box;
 }
+.pointer{
+    cursor: pointer;
+}
 
 /*Custom Scrollbar*/
 /* width */
@@ -20,8 +23,8 @@ section{
   
   /* Track */
   ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px #D3D2D2; 
-    border-radius: 10px;
+    box-shadow: inset 0 0 2px #D3D2D2; 
+    border-radius: 5px;
   }
    
   /* Handle */
@@ -129,9 +132,6 @@ option{
     font-size: 16px;
     line-height: 20px;
     font-weight: 500;
-}
-.pointer{
-    cursor: pointer;
 }
 .navbar-right-content{
     display: inline-flex;
@@ -281,7 +281,7 @@ input[type=search]:focus {
     font-size: 24px;
     font-weight: 600;
     position:absolute;
-    top:0;
+    top:5;
     bottom: auto;
     left: 0;
     right: auto;
@@ -299,19 +299,28 @@ input[type=search]:focus {
 /*Best Deals*/
 .product-container{
     display: flex;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
     gap:24px;
     margin-top: 40px;
 }
 .product-thumbnail{
     z-index: 0;
+    cursor: none;
+    overflow: hidden;
+}
+.product-thumbnail img{
+    width: 100%;
+    vertical-align: middle;
 }
 .product-item{
     background-color: #e3e3e3;
     border-radius: 10px;
     position: relative;
     width: 30vw;
+    transform-style: preserve-3d;
 }
+
 .heart{
     position: absolute;
     width: 40px;
@@ -328,8 +337,17 @@ input[type=search]:focus {
     left: auto;
     z-index: 1;
 }
+.product-content{
+    background-color: white;
+}
 .product-title{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1;
+}
+.text.span{
+    font-size: 13px;
+    position: relative;
+    top: -5px;
 }
