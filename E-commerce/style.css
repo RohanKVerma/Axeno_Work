@@ -11,6 +11,14 @@ section{
     margin-right: 40px;
     box-sizing: border-box;
 }
+.section-heading{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: Eina02, sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 100%;
+}
 .pointer{
     cursor: pointer;
 }
@@ -374,6 +382,39 @@ input[type=search]:focus {
     position: relative;
     top: -5px;
 }
+.product-rating{
+    display: flex;
+    margin-bottom: 10px;
+}
+.add-to-cart{
+    display: flex;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 12px 22px;
+    border: 1px solid #231F1E;
+    border-radius: 50px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 36px;
+    text-decoration: none;
+    transition: all .2s;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    cursor: pointer;
+}
+.add-to-cart button{
+    background-color: #FFFFFF;
+    color: #231F1E;
+    font-size: 14px;
+    line-height: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 0;
+}
 
 /*Brand Cards*/
 .brand-card-container{
@@ -404,20 +445,26 @@ input[type=search]:focus {
 .brand-title{
     margin-bottom: 13px;
 }
+@media screen and (max-width:956px){
+    .brand-card-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
 /*Discount cards*/
 .discount-items{
-    margin-top: 40px;
-    display: grid;
+    grid-column-gap: 23px;
+    grid-row-gap: 16px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap:20px;
+    display: grid;
+    margin-top: 40px;
 }
 .discount-card{
-    background-color: #F2E4D9;
     border-radius: 10px;
-    flex:none;
+    display: block;
     justify-content: center;
     align-items: center;
+    max-width: 280px;
 }
 .discount-content{
     padding: 30px;
@@ -448,4 +495,28 @@ input[type=search]:focus {
     border-bottom-right-radius: 10px;
     position: relative;
     overflow: hidden;
+}
+.discount-container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+#card-1{
+    background-color: #F2E4D9;
+}
+#card-2{
+    background-color: #F9DCDC;
+}
+#card-3{
+    background-color: #F2E4D9;
+}
+#card-4{
+    background-color: #D2F7EC;
+}
+@media screen and (max-width:957){
+    .discount-items{
+        grid-template-columns: 1fr 1fr;
+    }
 }
