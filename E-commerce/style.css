@@ -406,16 +406,11 @@ input[type=search]:focus {
     z-index: 0;
     cursor: pointer;
 }
-.add-to-cart button{
-    background-color: #FFFFFF;
-    color: #231F1E;
-    font-size: 14px;
-    line-height: 14px;
-    text-decoration: none;
+.add-to-cart:hover{
+    color: white;
     font-weight: 600;
-    border: 0;
+    background-color: #003D29;
 }
-
 /*Brand Cards*/
 .brand-card-container{
     display: grid;
