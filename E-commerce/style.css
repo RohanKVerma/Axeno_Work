@@ -631,11 +631,15 @@ input[type=search]:focus {
     vertical-align: middle;
     display: inline-block;
     overflow: clip;
+    transition: all .2s;
 }
 .trending-thumbnail-wrap{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     overflow: hidden;
+}
+.trending-thumbnail-wrap img:hover{
+    transform: scale(1.1);
 }
 .trending-content {
     padding: 30px;
@@ -696,6 +700,10 @@ input[type=search]:focus {
     padding: 16px 36px;
     margin-left: 0;
     border-radius: 40px;
+    transition: all .5s;
+}
+.button-color:hover{
+    background-color: #003D29;
 }
 
 /*Top Selling*/
@@ -730,7 +738,14 @@ input[type=search]:focus {
     max-width: 100%;
     vertical-align: middle;
     display: inline-block;
+    transition: all .2s;
 }
+.best-selling-image:hover{
+    transform: scale(1.1);
+    rotate: 2deg;
+    rotate: -2deg;
+}
+
 .store-thumbnail-wrap img {
     max-width: 100%;
     vertical-align: middle;
