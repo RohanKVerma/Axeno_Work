@@ -19,34 +19,20 @@ const countryName=["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "An
     "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay",
     "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"];
 countryName.sort();
-
-// const country = document.createElement('li');
-// forEach(countryName){
-//     country.textContent = this;
-// }
-// options.appendChild(country);
-
-
+const options = document.querySelector(".options");
+for (var i = 0; i < countryName.length; i++ ){
+  var newLI = document.createElement("li");
+  newLI.textContent = countryName[i];
+  options.appendChild(newLI);
+} 
 
 const selectBox = document.querySelector(".select-box");
 const selectOption = document.querySelector(".select-options");
 const ShowValue = document.querySelector("#showValue");
 const optionSearch = document.querySelector("#optionsearch");
-const options = document.querySelector(".options");
 const optionsList = document.querySelectorAll(".options li");
 
-for (var i = 0; i < countryName.length; i++ ){
-    // create a new li
-    var newLI = document.createElement("li");
-    var country = countryName[i];
-    // grab the spelling list item 
-    var newContent = document.createTextNode(country);
-    // add the spelling list item to the li
-    newLI.appendChild(newContent);
-    // get the unordered list and add the new li
-    var displaySpellList = document.getElementById("listSpelling");     
-    options.appendChild(newLI);
-} 
+
 
 selectOption.addEventListener("click", function () {
   selectBox.classList.toggle("active");
@@ -54,7 +40,7 @@ selectOption.addEventListener("click", function () {
 
 optionsList.forEach(function (optionsListItem) {
   optionsListItem.addEventListener("click", function () {
-    text = this.textContent;
+    const text = this.textContent;
     ShowValue.value = text;
     selectBox.classList.remove("active");
   });
