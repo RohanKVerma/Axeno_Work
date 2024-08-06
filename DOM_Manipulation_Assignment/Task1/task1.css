@@ -1,0 +1,81 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: azure;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.tagContainer{
+    padding: 20px 15px;
+    border: 1px solid blueviolet;
+    border-radius: 90px;
+    width: 650px;
+    height: auto;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.tagContainer ul{
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.tagContainer ul input{
+    border: 0;
+    outline: 0;
+    width: 10px;
+    flex-shrink: 1;
+    font-size: 22px;
+    background-color: azure;
+}
+li{
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: blueviolet;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 50px;
+}
+.cross_icon{
+    height: 20px;
+    width: 20px;
+    margin-left: 3px;
+    
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+input{
+    display: flex;
+    flex-grow: 1;
+}
+button{
+    margin-left: 10px;
+    padding:20px 30px;
+    border-radius: 60px;
+    background-color: blueviolet;
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
+    border: 0;
+}
+button:hover{
+    background-color: white;
+    color: blueviolet;
+    border: 2px solid blueviolet;
+}
