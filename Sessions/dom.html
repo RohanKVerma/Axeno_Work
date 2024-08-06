@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <div class="conatiner" style="align-content: center; justify-content: center;">
+        <div class="task1">
+            <h2>Task 1</h2>
+            <div class="color-box" id="myDiv" style="border: 1px solid grey; height: 100px; width: 100px;">
+
+            </div><br><br>
+            <button type="button" onclick='ChangeColor()'>Random Color</button>
+        </div>
+
+    </div>
+
+
+    <div class="task2" >
+        <h2>Task 2</h2>
+        <div class="boxContainer">
+
+        </div>
+        <button type="button" onclick='AddDiv()'>
+            Add div
+        </button>
+    </div>
+    <script>
+        function ChangeColor(){
+            let colorCode = randomColor();
+            console.log(colorCode);
+            document.getElementById("myDiv").style.backgroundColor = colorCode;
+            document.getElementById("myDiv").innerText=colorCode;
+        }
+        function  randomColor(){
+            return '#' + Math.floor(Math.random() * 16777215).toString(16);
+        }
+
+        function AddDiv(){
+            let task2 = document.createElement("div");
+            task2.innerText="This is a new div";
+            document.boxContainer.appendChild(task2);
+        }
+    </script>
+</body>
+</html>
