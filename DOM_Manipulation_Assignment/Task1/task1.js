@@ -9,7 +9,7 @@ function addTag(){
         if(tag.length > 1 && !tags.includes(tag)){
             tag.split(',').forEach(tag =>{
                 tag=tag.trim();
-                if(tag.length > 1){
+                if(tag.length > 0){
                     tags.push(tag);
                 }else{
                      error.classList.replace("invisible","visible");
