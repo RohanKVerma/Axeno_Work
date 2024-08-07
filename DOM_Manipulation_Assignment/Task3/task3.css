@@ -33,3 +33,15 @@ button:hover{
     border: 2px solid aquamarine;
     background-color: azure;
 }
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+    gap:10px
+}
+.invisible{
+    display: none;
+}
+.visible{
+    display: y;
+}
