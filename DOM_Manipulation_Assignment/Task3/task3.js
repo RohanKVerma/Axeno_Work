@@ -37,7 +37,7 @@ const InputListconfig = [
       label: "Create password",
     },
     { type: "date", id: "dob", name: "dob", max: "", min: "", placeholder: "", required: "", value: "", label: "Enter your Date of Birth" },
-    { type: "number", id: "phone", name: "marks", min: "", max: "", placeholder: "", required: "", value: "", label: "Enter your phone number" },
+    { type: "number", id: "phone", name: "marks", minLength:"10", maxLength:"10", placeholder: "", required: "", value: "", label: "Enter your phone number" },
     { type: "radio", id: "male", name: "gender", required: "", checked: "", value: "Male", label: "Male" },
     { type: "radio", id: "female", name: "gender", required: "", checked: "", value: "Female", label: "Female" },
     {
@@ -93,15 +93,15 @@ const InputListconfig = [
     input.setAttribute("type",field.type);
     input.setAttribute("name",field.name);
     input.setAttribute("id",field.id);
-    // if(field.maxLength.length > 0){
-    //   input.setAttribute("maxlength",field.maxLength);
-    // }
-    // if(field.minLength.length > 0){
-    //   input.setAttribute("minlength",field.minLength);
-    // }
-    // if(field.pattern.length){
-    //   input.setAttribute("pattern",field.pattern);
-    // }
+    if(field.maxLength> 0){
+      input.setAttribute("maxlength",field.maxLength);
+    }
+    if(field.minLength > 0){
+      input.setAttribute("minlength",field.minLength);
+    }
+    if(field.pattern){
+      input.setAttribute("pattern",field.pattern);
+    }
     form.appendChild(input);
   }
 
