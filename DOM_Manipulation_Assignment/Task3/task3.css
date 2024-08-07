@@ -14,7 +14,9 @@ body{
 .container{
     border:2px solid aquamarine;
     border-radius: 20px;
-    padding: 40px;
+    padding: 2%;
+    margin: 40px;
+    transition: all 0.5s;
 }
 .container:hover{
     box-shadow: 5px 5px 10px aquamarine;
@@ -27,7 +29,7 @@ button{
     margin: 10px;
     background-color: aquamarine;
     font-size: 18px;
-    transition: all .2s;
+    transition: all .1s;
 }
 button:hover{
     border: 2px solid aquamarine;
@@ -36,6 +38,8 @@ button:hover{
 form{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 15px 20px;
     gap:10px
 }
@@ -44,4 +48,24 @@ form{
 }
 .visible{
     display: y;
+}
+#generated-form input{
+    padding:10px 15px;
+    border-radius: 20px;
+    width: 350px;
+    transition: all 0.5s;
+}
+#generated-form input:focus{
+    background-color: rgba(127, 255, 212, 0.199);
+    width: 400px;
+}
+select{
+    background-color: white;
+    width: 350px;
+    padding: 15px 10px;
+    border-radius: 40px;
+    font-size: 14px;
+}
+option{
+    padding: 15px 10px;
 }
