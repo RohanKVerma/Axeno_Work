@@ -54,6 +54,7 @@ form{
     border-radius: 20px;
     width: 350px;
     transition: all 0.5s;
+    border: 1px solid black;
 }
 #generated-form input:focus{
     background-color: rgba(127, 255, 212, 0.199);
