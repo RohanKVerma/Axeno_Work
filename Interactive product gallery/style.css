@@ -56,9 +56,7 @@ body{
     transform: translateY(-10px);
     box-shadow: 0 0 10px;
 }
-.card img{
-    
-}
+
 .card-body{
     margin-left: 5px;
 }
