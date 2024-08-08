@@ -16,6 +16,7 @@ body{
 }
 .categories{
     display: flex;
+    max-width: fit-content;
     gap: 1vw;
     margin-top: 20px;
     margin-bottom: 30px;
