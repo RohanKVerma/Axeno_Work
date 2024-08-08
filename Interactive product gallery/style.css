@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    margin: 20px;
+}
+.searchBox{
+    margin-top: 20px;
+}
+.searchBox input{
+    width: 100%;
+    padding: 10px;
+}
+.categories{
+    display: flex;
+    gap: 1vw;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.category{
+    background-color: #41A745;
+    border-radius: 5px;
+    padding:10px 20px;
+    cursor: pointer;
+}
+.category button{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    background-color: transparent;
+    border: 0 !important;
+    outline: 0 !important;
+    cursor: pointer;
+}
+.itemList{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.card{
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    border-radius: 10px ;
+    transition: all 0.2s;
+}
+.card:hover{
+    scale:1.05;
+    transform: translateY(-10px);
+    box-shadow: 0 0 10px;
+}
+.card-body{
+    margin-left: 5px;
+    padding: 10px;
+}
+.price{
+    color: red;
+}
+.item-category{
+    background-color: #0000003c;
+    max-width: fit-content;
+    padding: 5px;
+    border-radius: 20px;
+}
