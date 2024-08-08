@@ -16,6 +16,7 @@ body{
 }
 .categories{
     display: flex;
+    flex-wrap: wrap;
     max-width: fit-content;
     gap: 1vw;
     margin-top: 20px;
@@ -39,7 +40,10 @@ body{
 .itemList{
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 30px !important;
 }
 .card{
     padding: 5px;
@@ -51,6 +55,9 @@ body{
     scale:1.05;
     transform: translateY(-10px);
     box-shadow: 0 0 10px;
+}
+.card img{
+    
 }
 .card-body{
     margin-left: 5px;
