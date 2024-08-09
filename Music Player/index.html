@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="album_art">
+            <img id="album_art" src="" alt="">
+        </div>
+        <div class="progress_bar">
+            <div class="bar" id="bar"></div>
+            <audio id="player" src="" autoplay="true"></audio>
+            <div class="timer">
+                <div class="escaped"></div>
+                <div class="remaining"></div>
+            </div>
+        </div>
+        <div class="song_title">
+            <p id="song_title"></p>
+        </div>
+        <div class="song_artist">
+            <p id="song_artist"></p>
+        </div>
+        <div class="controls">
+            <div class="shuffle_btn">
+                <button id="shuffle_btn" onclick="shuffle()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M560-160v-80h104L537-367l57-57 126 126v-102h80v240H560Zm-344 0-56-56 504-504H560v-80h240v240h-80v-104L216-160Zm151-377L160-744l56-56 207 207-56 56Z"/></svg></button>
+            </div>
+            <div class="previous_btn">
+                <button id="previous_btn" onclick="previous()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M220-240v-480h80v480h-80Zm520 0L380-480l360-240v480Zm-80-240Zm0 90v-180l-136 90 136 90Z"/></svg></button>
+            </div>
+            <div class="play_pause">
+                <button id="play_pause" onclick="playPause()"><svg xmlns="http://www.w3.org/2000/svg" height="62px" viewBox="0 -960 960 960" width="62px" fill="#e8eaed"><path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/></svg></button>
+            </div>
+            <div class="next_btn">
+                <button id="next_btn" onclick="next()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M660-240v-480h80v480h-80Zm-440 0v-480l360 240-360 240Zm80-240Zm0 90 136-90-136-90v180Z"/></svg></button>
+            </div>
+            <div class="loop">
+                <button id="loop_btn" onclick="loop()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M280-80 120-240l160-160 56 58-62 62h406v-160h80v240H274l62 62-56 58Zm-80-440v-240h486l-62-62 56-58 160 160-160 160-56-58 62-62H280v160h-80Z"/></svg></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: azure;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 40px;
+    border: 1px solid #FF0043;
+    border-radius: 20px;
+    box-shadow:  0 0 20px #FF0043;
+}
+.album_art{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow:  0 0 5px;
+}
+.album_art img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+.active{
+    transform-origin: center;
+    animation: rotateArt 7s infinite linear forwards;
+}
+@keyframes rotateArt{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+.progress_bar{
+    margin-top: 20px;
+    width: 100%;
+    height: 5px;
+    border: 1px solid #FF0043;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #FF0043;
+}
+#bar{
+    height: 100%;
+    width: 0;
+    background-color: #FF0043;
+}
+/* #bar::after{
+    content: "";
+    position:absolute;
+    top: 0;
+    height: 10px;
+    width: 10px;
+    border-radius: 20px;
+    background-color: #FF0043;
+    z-index: 999;
+} */
+.timer{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 14px;
+    justify-content: space-between;
+}
+.timer .escaped{
+    align-items:flex-start;
+}
+.timer .remaining{
+    align-items: flex-end;
+}
+.song_title{
+    margin-top:20px;
+    font-size: 28px;
+}
+.song_artist{
+    font-size: 16px;
+    font-weight: 100;
+    color: #ababab;
+}
+.controls{
+    margin-top: 40px;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.controls button{
+    border-radius: 50%;
+    border: 2px solid red;
+    background-color: transparent;
+    padding: 5px;
+    border: 0 !important;
+    outline: 0 !important;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#play_pause:hover{
+    background-color: transparent;
+}
+.controls button svg{
+    fill: gray;
+    border-radius: 50%;
+}
+.controls button:hover{
+    background-color: #ababab59;
+}
+#play_pause svg{
+    background-color: #FF0043;
+    border: 2px solid #FF0043;
+    fill: white;
+}
