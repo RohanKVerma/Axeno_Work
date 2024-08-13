@@ -13,7 +13,7 @@ fetch('https://fakestoreapiserver.reactbd.com/walmart')
         const top_details = document.createElement('div');
         top_details.classList.add('top_details');
         top_details.innerHTML=
-            `<div  class="brand">${item.brand}</div>
+            `<div class="brand">${item.brand}</div>
             <div class="category">${item.category}</div>`;
         card.appendChild(top_details);
         const imgHolder = document.createElement('div');
@@ -22,44 +22,17 @@ fetch('https://fakestoreapiserver.reactbd.com/walmart')
         image.setAttribute("src",item.image);
         image.setAttribute("alt",item.title);
         imgHolder.appendChild(image);
-        // imgHolder.innerHTML=
-        // `<img src ="${item.image}" alt = "${item.title}"`;
         card.appendChild(imgHolder);
         const productDetails = document.createElement('div');
         productDetails.classList.add('productDetails');
         productDetails.innerHTML=
         `<div class="title">${item.title}</div>
-         <div class="price">$ ${item.price}</div>
+         <div class="price">$${item.price}</div>
          <div class="description">${item.des}</div>`;
          card.appendChild(productDetails);
-         cardContainer.appendChild(card);
-
-
-    const checkbox = document.querySelector('.checkbox #isNewBox');
-    const cards = document.querySelectorAll('.card');
+         cardContainer.appendChild(card);  
+    })
     
-    checkbox.addEventListener('click',function(){
-    if(!checkbox.hasAttribute('checked')){
-        checkbox.setAttribute('checked','');
-        cards.forEach(function(card){
-            if(card.isnew == 'true'){
-                card.style.display = 'block';
-            }else{
-                card.style.display = 'none';
-            }
-        });
-    }else{
-        checkbox.removeAttribute('checked');
-        cards.forEach(function(card){
-            card.style.display = 'block';
-        })
-    }
-})
-    
-
-
-    });
-
    })
    .catch(console.error); 
 
@@ -83,3 +56,22 @@ searchBox.addEventListener('keyup', function(){
     }
 });
 
+const checkbox = document.querySelector('#isNewBox');
+checkbox.addEventListener('click', function(){
+    const items = document.querySelectorAll('.card');
+    if(!checkbox.hasAttribute('checked')){
+        checkbox.setAttribute('checked','');
+        items.forEach(card => {
+            if(card.getAttribute('isnew') == 'true'){
+                card.style.display = 'block';
+            }else{
+                card.style.display = 'none';
+            }
+        });
+    }else{
+        checkbox.removeAttribute('checked');
+        items.forEach(card => {
+            card.style.display = 'block';
+        })
+    }
+})
