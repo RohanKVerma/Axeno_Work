@@ -25,6 +25,25 @@
 .searchBox input:focus{
     background-color: rgba(188, 188, 188, 0.575);
 }
+.searchBox input:focus + ul{
+    display: block;
+}
+ul{
+    list-style: none;
+    width: 85.5%;
+    background-color: aquamarine;
+    z-index: 999;
+    position: absolute;
+    display: none;
+}
+ul li{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+.active{
+    display: block;
+}
 .checkbox{
     height: 100%;
     padding: 10px;
@@ -44,6 +63,7 @@
     margin-right: 10px;
     flex-wrap: wrap;
     background-color: azure;
+    position: relative;
 
 }
 .card{
