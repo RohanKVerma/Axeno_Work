@@ -117,3 +117,19 @@ searchBox.addEventListener("keyup", function () {
     brandList.style.display = "none";
   }
 });
+
+const themeColor = document.querySelector('#themeColor');
+const textColor = document.querySelector('#textColor');
+const bgColor = document.querySelector('#bgColor');
+themeColor.addEventListener('change', function(){
+    var root = document.documentElement;
+    root.style.setProperty('--theme-color', themeColor.value);
+})
+textColor.addEventListener('change', function(){
+    var root = document.documentElement;
+    root.style.setProperty('--text-color', textColor.value);
+})
+bgColor.addEventListener('change', function(){
+    var root = document.documentElement;
+    root.style.setProperty('--bg-color', bgColor.value);
+})
