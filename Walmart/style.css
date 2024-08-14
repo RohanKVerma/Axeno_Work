@@ -1,3 +1,6 @@
+:root{
+    --theme-color: aqua;
+}
 *{
     margin:0;
     padding:0;
@@ -18,20 +21,20 @@
 .searchBox input{
     width: 100%;
     padding: 10px;
-    border: 2px solid aquamarine;
+    border: 2px solid var(--theme-color);
     border-radius: 5px;
     outline: 0;
 }
 .searchBox input:focus{
     background-color: rgba(188, 188, 188, 0.575);
 }
-.searchBox input:focus + ul{
+/* .searchBox input:focus + ul{
     display: block;
-}
+} */
 ul{
     list-style: none;
     width: 85.5%;
-    background-color: aquamarine;
+    background-color: var(--theme-color);
     z-index: 999;
     position: absolute;
     display: none;
@@ -40,6 +43,10 @@ ul li{
     padding: 10px;
     border: 1px solid black;
     border-radius: 2px;
+}
+ul li:hover{
+    background-color: aliceblue;
+    cursor: pointer;
 }
 .active{
     display: block;
@@ -71,9 +78,9 @@ ul li{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid aquamarine;
+    border: 2px solid var(--theme-color);
     border-radius: 10px;
-    box-shadow:  0 0 5px aquamarine;
+    box-shadow:  0 0 5px var(--theme-color);
     margin:20px;
     padding: 10px;
 }
@@ -84,15 +91,14 @@ ul li{
     width: 100%;
 }
  .brand{
-    background-color: yellow;
-    border: 1px solid yellow;
+    background-color: var(--theme-color);
+    border: 1px solid var(--theme-color);
     padding: 5px;
     border-radius: 5px;
 }
 .category{
-    background-color: blue;
-    border: 1px solid blue;
-    color: white;
+    background-color: var(--theme-color);
+    border: 1px solid var(--theme-color);
     padding: 5px;
     border-radius: 5px;
 }
@@ -115,4 +121,7 @@ ul li{
 }
 .productDetails div{
     text-align: center;
+}
+.productDetails .price{
+    color: red;
 }

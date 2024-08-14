@@ -6,7 +6,7 @@ fetch("https://fakestoreapiserver.reactbd.com/walmart")
   })
   .then(() => {
     const cardContainer = document.querySelector(".cardContainer");
-    
+
     obj.forEach((item) => {
       const card = document.createElement("div");
       card.classList.add("card");
@@ -31,19 +31,32 @@ fetch("https://fakestoreapiserver.reactbd.com/walmart")
       card.appendChild(productDetails);
       cardContainer.appendChild(card);
     });
-    
-    const ul = document.querySelector('ul');
-    let brandList = [...new Set(obj.map(item => item.brand))];
-    brandList.forEach(brand => {
-        let liBrand = document.createElement('li');
-        liBrand.textContent = brand;
-        ul.appendChild(liBrand);
+
+    const ul = document.querySelector("ul");
+    let brandList = [...new Set(obj.map((item) => item.brand))];
+    brandList.forEach((brand) => {
+      let liBrand = document.createElement("li");
+      liBrand.textContent = brand;
+      ul.appendChild(liBrand);
+    });
+    const searchBox = document.querySelector("#searchbar");
+    const brandListOptions = document.querySelector("ul");
+    brandListOptions.addEventListener("click", function (e) {
+      const text = e.target.textContent;
+      searchBox.value = text;
+      searchItem();
+      brandListOptions.style.display = "none";
+      console.log(text);
     });
   })
   .catch(console.error);
 
 const searchBox = document.querySelector("#searchbar");
 searchBox.addEventListener("keyup", function () {
+  searchItem();
+});
+
+function searchItem() {
   const searchValue = searchBox.value.toLowerCase();
   const items = document.querySelectorAll(".card");
   if (searchValue.length > 2) {
@@ -62,7 +75,7 @@ searchBox.addEventListener("keyup", function () {
       item.style.display = "block";
     });
   }
-});
+}
 
 const checkbox = document.querySelector("#isNewBox");
 checkbox.addEventListener("click", function () {
@@ -84,19 +97,23 @@ checkbox.addEventListener("click", function () {
   }
 });
 
-const brandList = document.querySelector('ul');
-
-  searchBox.addEventListener('keyup', function(){
+const brandList = document.querySelector("ul");
+searchBox.addEventListener("keyup", function () {
   var filter, li, textValue;
   filter = searchBox.value.toUpperCase();
-  li = brandList.getElementsByTagName('li');
-  for (let i = 0; i < li.length; i++){
-    liCount = li[i];
-    textValue = liCount.textContent || liCount.innerText;
-    if (textValue.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = '';
-    } else {
-      li[i].style.display = 'none';
+  if (filter.length > 1) {
+    brandList.style.display = "block";
+    li = brandList.getElementsByTagName("li");
+    for (let i = 0; i < li.length; i++) {
+      liCount = li[i];
+      textValue = liCount.textContent || liCount.innerText;
+      if (textValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
     }
+  } else {
+    brandList.style.display = "none";
   }
 });
