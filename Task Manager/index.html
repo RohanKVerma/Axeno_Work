@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TypeScript</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- !NOTE: SIDE AREA TO CREATE AND ADD NEW TASK TO TASK LIST -->
+
+    <div class="create_task">
+      <form action="">
+        <div class="task_title">
+          <label for="task_title">Task Title</label>
+          <input type="text" id="task_title" placeholder="Enter Task Title" />
+        </div>
+        <div class="task_desc">
+          <label for="task_desc">Task Description</label>
+          <textarea
+            id="task_desc"
+            rows="5"
+            placeholder="description..."
+          ></textarea>
+        </div>
+        <div class="due_prio">
+          <div class="due">
+            <label for="due_date">Due Date</label>
+            <input type="date" id="due_date" placeholder="DD/MM/YYYY" />
+          </div>
+          <div class="priority">
+            <label for="priority">Priority</label>
+            <select id="priority_selector">
+              <option value="3">Low</option>
+              <option value="2">Medium</option>
+              <option value="1">High</option>
+            </select>
+          </div>
+        </div>
+        <div class="category_container">
+          <label for="category">Categories</label>
+          <div class="category" id="category">
+            <!-- <div class="cat_item">
+              Work
+              <div class="close_btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="16px"
+                  viewBox="0 -960 960 960"
+                  width="16px"
+                  fill="#e8eaed"
+                >
+                  <path
+                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="cat_item">
+              Personal
+              <div class="close_btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="16px"
+                  viewBox="0 -960 960 960"
+                  width="16px"
+                  fill="#e8eaed"
+                >
+                  <path
+                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                  />
+                </svg>
+              </div>
+            </div> -->
+            <input
+              id="cat_input"
+              type="text"
+              placeholder="Select Category..."
+            />
+          </div>
+        </div>
+        <div class="cat_list" id="cat_list">
+          <li>Work</li>
+          <li>Personal</li>
+          <li>Meeting</li>
+          <li>Reminder</li>
+        </div>
+        <button class="add_to_list">Add</button>
+      </form>
+    </div>
+
+    <!-- !NOTE: MAIN BODY WITH TASK LIST -->
+
+    <div class="main">
+      <div class="main_content">
+        <h1 class="title">Task Manager</h1>
+
+        <div class="search_filter">
+          <label for="search_input">Search</label>
+          <input
+            type="text"
+            id="search_input"
+            placeholder="Search from Title, description..."
+          />
+        </div>
+
+        <div class="sort_filter">
+          <div class="cat_filter">
+            <label for="category">Categories</label>
+            <div class="category" id="category">
+              <div class="cat_item">
+                Work
+                <div class="close_btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="16px"
+                    viewBox="0 -960 960 960"
+                    width="16px"
+                    fill="#e8eaed"
+                  >
+                    <path
+                      d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="cat_item">
+                Personal
+                <div class="close_btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="16px"
+                    viewBox="0 -960 960 960"
+                    width="16px"
+                    fill="#e8eaed"
+                  >
+                    <path
+                      d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <input
+                id="cat_input"
+                type="text"
+                placeholder="Select Category..."
+              />
+            </div>
+          </div>
+
+          <div class="priority_sort">
+            <label for="sort_priority">Sort by Priority</label>
+            <select id="sort_priority">
+              <option value="0">All tasks</option>
+              <option value="3">Low</option>
+              <option value="2">Medium</option>
+              <option value="1">High</option>
+            </select>
+          </div>
+          <div class="status_filter">
+            <label for="filter">Filter</label>
+            <select name="Status" id="filter">
+              <option value="all">All tasks</option>
+              <option value="complete">Completed tasks</option>
+              <option value="incomplete">Incomplete tasks</option>
+            </select>
+          </div>
+        </div>
+        <div class="task_list">Task list is empty.</div>
+      </div>
+    </div>
+  
+<script src="dist/script.js"></script>
+</body>
+</html>
