@@ -1,5 +1,5 @@
 const city = 'noida';
-const APIKey = '46362dd6acc46810f83278bad6b3c462';
+const APIKey = '<Your API Key>';
 
 fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}&units=metric`)
 .then(response => response.json())
