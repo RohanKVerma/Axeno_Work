@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Task Manager</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="shortcut icon" href="/Assets/tm-01_4x.jpg" type="image/x-icon">
+</head>
+<body>
+      <div class="left_side">
+            <div class="left_content">
+                  <!-- *Get Task title -->
+                  <div class="task_title">
+                        Task Title
+                        <input type="text" id="task_title" placeholder="Enter task title" required>
+                  </div>
+                  <!-- *Get task description -->
+                  <div class="task_description">
+                        Task Description
+                        <textarea id="task_desc" rows="3" placeholder="Enter task description" required></textarea>
+                  </div>
+                  <!-- *Get due date and priority -->
+                   <div class="task_details">
+                        <div class="due_date">
+                              Due Date
+                              <input type="date" name="due_date" id="due_date" required>
+                        </div>
+                        <div class="priority">
+                              Priority
+                              <select id="priority">
+                                    <option value="1">Low</option>
+                                    <option value="2">Medium</option>
+                                    <option value="3">High</option>
+                              </select>
+                        </div>
+                   </div>
+                   <!-- *Get task category -->
+                    <div class="category_container" id="category_container">
+                        Category
+                        <div class="category_box" id="category_box_create">
+                              <ul class="tags" id="create_tags">
+                              </ul>
+                              <input type="text" id="category_input" placeholder="Select category">
+                        </div>
+                        <div class="suggested_category" id="suggested_category">
+                              <ul class="suggested_tags">
+                                    <li>Work</li>
+                                    <li>Personal</li>
+                                    <li>Home</li>
+                                    <li>School</li>
+                                    <li>Other</li>
+                              </ul>
+                        </div>
+                    </div>
+                    <!-- *Add to list btn -->
+                     <button type="button" id="add_btn">Add</button>
+            </div>
+      </div>
+
+
+
+      <div class="right_side">
+            <h1 class="title">Task Manager</h1>
+
+            <!-- *search by task title or description -->
+            <div class="search_filter">
+                  Search
+                  <input type="text" id="search_filter_input" placeholder="Search by title or description">
+            </div>
+
+            <div class="more_filter">
+                  <!-- *Filter by category -->
+                  <div class="category_container" id="category_container">
+                        Category
+                        <div class="category_box" id="category_box_filter">
+                              <ul class="tags" id="tags_filter">
+                              </ul>
+                              <input type="text" id="category_input_filter" class="category_input">
+                        </div>
+                        <div class="suggested_category" id="suggested_category_filter">
+                              <ul class="suggested_tags_filter" id="suggested_tags_filter">
+                                    <li>Work</li>
+                                    <li>Personal</li>
+                                    <li>Home</li>
+                                    <li>School</li>
+                                    <li>Other</li>
+                              </ul>
+                        </div>
+                    </div>
+
+                  <!-- *Sort by priority -->
+                   <div class="sort_by_priority">
+                        Sort by Priority
+                        <select id="sort_by_priority">
+                              <option value="des">High to Low</option>
+                              <option value="asc">Low to High</option>
+                        </select>
+                   </div>
+
+                   <!-- *Filter by status (completed or incomplete) -->
+                    <div class="filter_by_status">
+                        Filter by Status
+                        <select id="filter_by_status">
+                              <option value="all">All</option>
+                              <option value="complete">Completed</option>
+                              <option value="incomplete">Incompleted</option>
+                        </select>
+                    </div>        
+            </div>
+
+                  <!-- *Display task list -->
+                  <div class="task_list_container">
+                        <div class="task incomplete">
+                              <div class="task_top">
+                                    <input type="checkbox" name="status" class="status_checkbox" id="status">
+                                    <div class="task_heading">Webpack Assignment</div>
+                                    <div class="delete_btn"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ababab"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg></div>
+                              </div>
+                              <div class="task_body">
+                                    <div class="task_due">
+                                          <div class="due_date">Due Date: 2023-02-20</div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <div class="prio">High Priority</div>
+                                    </div>
+                                    <div class="task_tags">
+                                          <ul class="task_tag">
+                                                <li class="tag">Work</li>
+                                                <li class="tag">Personal</li>
+                                          </ul>
+                                    </div>
+                                    <div class="task_desc">
+                                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus repudiandae maiores repellendus commodi? Fugit aut tempora, ad a reprehenderit quae itaque doloribus atque quibusdam officiis molestiae nam commodi, optio quos!
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+
+      </div>
+<script src="src/script.js"></script>
+</body>
+</html>
